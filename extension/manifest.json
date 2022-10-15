@@ -1,0 +1,26 @@
+{
+    "name": "SecureLink",
+    "version": "1.0.0",
+    "icons": {
+        "16": "Design_2.png",
+        "48": "Design_2.png",
+        "128": "Design_2.png"
+    },
+    "description": "Preview your links before clicking on them!",
+    "manifest_version": 3,
+    "author": "Shekhar & Aryaan",
+    "action": {
+        "default_popup": "static/index.html",
+        "default_title": "SecureLink"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://www.google.com/*"],
+            "exclude_globs": [
+                "https://www.google.com/"
+            ],
+            "css": ["my-styles.css"],
+            "js": ["content-script.js"]
+        }
+    ]
+}
