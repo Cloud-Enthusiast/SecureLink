@@ -197,7 +197,10 @@ model = BERT_Arch(bert)
 optimizer = AdamW(model.parameters(), lr=1e-5)
 
 
-class_weights = compute_class_weight('balanced', np.unique(train_labels), train_labels)
+class_weights = compute_class_weight(
+    class_weight = 'balanced', 
+    classes = np.unique(train_labels), 
+    y = train_labels)
 
 print("Class Weights:", class_weights)
 
