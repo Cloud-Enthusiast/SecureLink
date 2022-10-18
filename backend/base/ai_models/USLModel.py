@@ -38,9 +38,9 @@ colors = ['xkcd:pale range', 'xkcd:sea blue', 'xkcd:pale red', 'xkcd:sage green'
 bbox_props = dict(boxstyle="round,pad=0.3", fc=colors[0], alpha=.5)
 
 
-true_data = pd.read_csv('True.csv')
+true_data = pd.read_csv('D:/Users/Shekhar/SecureLink/Dataset/True.csv')
 
-false_data = pd.read_csv('Fake.csv')
+false_data = pd.read_csv('D:/Users/Shekhar/SecureLink/Dataset/Fake.csv')
 
 true_data.head()
 
