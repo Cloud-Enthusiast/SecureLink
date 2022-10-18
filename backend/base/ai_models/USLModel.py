@@ -1,3 +1,6 @@
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+import tensorflow as tf
 import pandas as pd
 from sklearn.metrics import plot_confusion_matrix
 from sklearn.preprocessing import LabelEncoder
@@ -12,6 +15,7 @@ import torch
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
+
 
 #from googletrans import Translator
 plt.style.use('ggplot')
