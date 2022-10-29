@@ -198,9 +198,9 @@ optimizer = AdamW(model.parameters(), lr=1e-5)
 
 
 class_weights = compute_class_weight(
-    class_weight = 'balanced', 
-    classes = np.unique(train_labels), 
-    y = train_labels)
+    class_weight='balanced',
+    classes=np.unique(train_labels),
+    y=train_labels)
 
 print("Class Weights:", class_weights)
 
@@ -226,7 +226,7 @@ def train():
     for step, batch in enumerate(train_dataloader):
 
         # progress update after every 50 batches.
-        if step % 50 == 0 and not step == 0:
+        if step % 100 == 0 and not step == 0:
             print('  Batch {:>5,}  of  {:>5,}.'.format(
                 step, len(train_dataloader)))
 
@@ -288,7 +288,7 @@ def evaluate():
     for step, batch in enumerate(val_dataloader):
 
         # Progress update every 50 batches.
-        if step % 50 == 0 and not step == 0:
+        if step % 100 == 0 and not step == 0:
 
             # Calculate elapsed time in minutes.
             #elapsed = format_time(time.time() - t0)
@@ -365,3 +365,4 @@ with torch.no_grad():
 # Confusion Matrix
 preds = np.argmax(preds, axis=1)
 print(classification_report(test_y, preds))
+
